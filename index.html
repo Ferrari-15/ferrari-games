@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes"> <!-- Permite que o site seja executado como um aplicativo da web -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Permite que o site seja executado como um aplicativo da web no iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Define a cor da barra de status no iOS -->
+    <meta name="apple-mobile-web-app-title" content="Seu Título Aqui"> <!-- Título que aparece quando o site é executado como um aplicativo da web no iOS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Betano Cadastro</title>
+</head>
+<body onload="registrarAcesso()">
+    <div class="background">
+        <!-- Substitui o vídeo por uma imagem de fundo -->
+        <div class="background-image"></div>
+
+        <div class="container">
+            <!-- Adiciona a imagem do logo -->
+            <img src="/assets/pagamento/img/th.jpeg" alt="Logo da Betano" class="logo">
+            <h1>Cadastro</h1>
+            <form id="cadastroForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <div></div>
+
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>
+                <div></div>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <button type="button" onclick="cadastrar()">Cadastrar</button>
+            </form>
+        </div>
+
+        <audio id="audio" autoplay loop>
+            <source src="/assets/pagamento/mp3/LET_S GO 4 - DJ GBR_ IG_ Ryan SP_ PH_ Davi_ Luki_ Don Juan_ Kadu _GH do 7_ GP_ TrapLaudo(144P).mp4" type="audio/mp4">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+        <div id="audioToggle" onclick="toggleAudio()">
+            <img src="" alt="Ícone de Áudio">
+        </div>
+
+        <a href="/assets/pagamento/pgto.html">Clique aqui para Depositar</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

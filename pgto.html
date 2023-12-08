@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes"> <!-- Permite que o site seja executado como um aplicativo da web -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Permite que o site seja executado como um aplicativo da web no iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Define a cor da barra de status no iOS -->
+    <meta name="apple-mobile-web-app-title" content="Seu Título Aqui"> <!-- Título que aparece quando o site é executado como um aplicativo da web no iOS -->
+    <link rel="stylesheet" href="/assets/pagamento/pgto.css">
+    <title>Pagamento-BETANO</title>
+    <style>
+        /* Adicione estilos CSS conforme necessário */
+        .conteudoParaCopiar,
+        .esconder {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FAÇA SEU DEPÓSITO AGORA E GARANTA PRÊMIOS</h1>
+        <div class="item">
+            <div id="conteudoParaCopiar1" class="conteudoParaCopiar">
+                00020101021126580014br.gov.bcb.pix01364889e57b-88d7-41ae-a9a5-a103b07cd905520400005303986540510.005802BR5925WILLIAM HENRIQUE DE ARAUJ6009SAO PAULO622905251HH3AZY32E1Z7C41WBT0Z6Q356304F996
+            </div>
+            <button class="copyButton" onclick="copyText('conteudoParaCopiar1', 'botaoEscondido1')">R$ 3,00</button>
+
+            <div id="conteudoParaCopiar2" class="conteudoParaCopiar">
+                00020101021126580014br.gov.bcb.pix01364889e57b-88d7-41ae-a9a5-a103b07cd90552040000530398654045.005802BR5925WILLIAM HENRIQUE DE ARAUJ6009SAO PAULO622905251HH3ABZE6R1NQP22TBGJRDVP46304ACAA
+            </div>
+            <button class="copyButton" onclick="copyText('conteudoParaCopiar2', 'botaoEscondido2')">R$ 5,00</button>
+
+            
+            <div id="conteudoParaCopiar2" class="conteudoParaCopiar">
+               00020101021126580014br.gov.bcb.pix01364889e57b-88d7-41ae-a9a5-a103b07cd905520400005303986540510.005802BR5925WILLIAM HENRIQUE DE ARAUJ6009SAO PAULO622905251HH3AZY32E1Z7C41WBT0Z6Q356304F996
+            </div>
+            <button class="copyButton" onclick="copyText('conteudoParaCopiar2', 'botaoEscondido2')">R$ 10,00</button>
+
+            
+            <div id="conteudoParaCopiar2" class="conteudoParaCopiar">
+                00020101021126580014br.gov.bcb.pix01364889e57b-88d7-41ae-a9a5-a103b07cd905520400005303986540520.005802BR5925WILLIAM HENRIQUE DE ARAUJ6009SAO PAULO622905251HH3B496M7FGWADMRWFA3S9RV6304D13A
+            </div>
+            <button class="copyButton" onclick="copyText('conteudoParaCopiar2', 'botaoEscondido2')">R$ 20,00</button>
+
+            
+            <div id="conteudoParaCopiar2" class="conteudoParaCopiar">
+                00020101021126580014br.gov.bcb.pix01364889e57b-88d7-41ae-a9a5-a103b07cd9055204000053039865802BR5925WILLIAM HENRIQUE DE ARAUJ6009SAO PAULO622905251HH3B7Q2T59XDDQ02SQPTC0J76304DB3C
+            </div>
+            <button class="copyButton" onclick="copyText('conteudoParaCopiar2', 'botaoEscondido2')">R$ acima de 30</button>
+
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+
+        <!-- Botão para direcionar para outra página -->
+        <button id="SAQUE" class="esconder" onclick="redirecionarParaOutraPagina()">SAQUE</button>
+    </div>
+
+    <script>
+        function copyText(elementId, botaoEscondidoId) {
+            var conteudo = document.getElementById(elementId);
+            var areaDeTransferencia = document.createElement("textarea");
+
+            // Coloca o texto na área de transferência
+            areaDeTransferencia.value = conteudo.textContent;
+
+            // Adiciona a área de transferência ao documento
+            document.body.appendChild(areaDeTransferencia);
+
+            // Seleciona o texto na área de transferência
+            areaDeTransferencia.select();
+
+            // Copia o texto na área de transferência
+            document.execCommand("copy");
+
+            // Remove a área de transferência do documento
+            document.body.removeChild(areaDeTransferencia);
+
+            // Exibe o conteúdo oculto
+            conteudo.classList.remove('conteudoParaCopiar');
+
+            // Exibe o botão escondido após 50 segundos
+            setTimeout(function () {
+                document.getElementById(botaoEscondidoId).classList.remove('esconder');
+            }, 50000);
+
+            // Alerta o usuário que o texto foi copiado
+            alert("CHAVE PIX COPIADA COM SUCESSO!");
+        }
+
+        function redirecionarParaOutraPagina() {
+            // Redireciona para a outra página
+            window.location.href = "";
+        }
+
+        // Exibe o botão para outra página após 50 segundos
+        setTimeout(function () {
+            document.getElementById('SAQUE').classList.remove('esconder');
+        }, 50000);
+    </script>
+</body>
+</html>

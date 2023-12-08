@@ -1,0 +1,105 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    /* Adicione a imagem de fundo aqui */
+    background-image: url("/assets/pagamento/img/Bet777.jpg");
+      background-image: url("/assets/pagamento/img/Bet777.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+}
+
+.container { 
+    
+    background-color:blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.logo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para os elementos dentro do formulário */
+#cadastroForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0;
+    border: black;
+    padding: 10px;
+    background-color: black;
+}
+
+input {
+    color: blue;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: black;
+    color: blue;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+    animation: blink 1s infinite; /* Adiciona o efeito de piscar */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+h1 {
+    color: black;
+}
+
+
+
+
+
+
+
+
+/* Estilos padrão para telas maiores */
+.container {
+    max-width: 800px; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    /* Outros estilos conforme necessário */
+}
+
+/* Estilos específicos para telas menores, como celulares */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%; /* Usa toda a largura disponível */
+        padding: 10px; /* Adiciona algum preenchimento para melhor legibilidade */
+    }
+    /* Outros estilos conforme necessário */
+}

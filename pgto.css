@@ -1,0 +1,82 @@
+body {
+    background-image: url("/assets/pagamento/img/th (1).jpeg");
+    /* Substitua pela sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.item {
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    color: blue; /* Cor do texto branco */
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Efeito de sobreposição */
+    z-index: -1;
+}
+
+.copyButton {
+    animation: blink 1s infinite;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Cor verde */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.copyButton:hover {
+    animation: blink 1s infinite;
+    background-color: #45a049; /* Cor verde mais escura no hover */
+}
+
+h1 {
+    color: green;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+/* Estilos padrão para telas maiores */
+.container {
+    max-width: 800px; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    /* Outros estilos conforme necessário */
+}
+
+/* Estilos específicos para telas menores, como celulares */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%; /* Usa toda a largura disponível */
+        padding: 10px; /* Adiciona algum preenchimento para melhor legibilidade */
+    }
+    /* Outros estilos conforme necessário */
+}
